@@ -1,0 +1,106 @@
+.bold{
+    font-weight: bold;
+}
+.border{
+    margin: 8px 16px;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    padding: 10px 32px;
+}
+a{
+    text-decoration: none;
+}
+.cb{
+    width: 150px;
+    max-width: 300px;
+    text-transform: capitalize;;
+}
+.df{
+    display:flex;
+    align-items: center;
+}
+.df img{
+    height: 80%;
+}
+.transition{
+    transition: all 500ms;
+}
+
+@media screen and (max-width: 1024px){
+    .nodisplay{
+        display:none!important;
+    }
+    .hotel-conteiner{
+        position: relative;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        box-flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+    .hotel-parent{
+        margin: 0 -12px;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    .hotel-info{
+        -webkit-box-flex: 50%;
+        -moz-box-flex: 50%;
+        box-flex: 50%;
+        -webkit-flex: 50%;
+        -moz-flex: 50%;
+        -ms-flex: 50%;
+        flex: 50%;
+    }
+    .spacing{
+        padding: 0 12px;
+    }
+}
+.hotel-img{
+    background-color: #000;
+    height: 10em;
+    width: 100%
+}
+.w100{
+    width: 100%!important;
+}
+.conteiner-image{
+    position: relative;
+}
+.hotel-column{
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }

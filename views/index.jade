@@ -1,0 +1,83 @@
+extends layout
+block content
+  div(ng-app="almundo" ng-controller="controladorHoteles as vm")
+    .header.p.pt0
+      div.row.bgc-indigo-700
+        .col-xs-2(id="logo")
+          img(id="imgLogo" src="/img/logo-almundo.svg")
+      div.row.bgc-indigo-700
+        div.col-xs
+          a(href="#").bold.tc-white.ml Hoteles
+        div.col-xs
+          a(href="#").bold.tc-white Vuelos
+        div.col-xs
+          a(href="#").bold.tc-white Vuelos + Hoteles
+        div.col-xs
+          a(href="#").bold.tc-white Paquetes
+        div.col-xs
+          a(href="#").bold.tc-white Disney
+        div.col-xs
+          a(href="#").bold.tc-white Escapadas
+        div.col-xs
+          a(href="#").bold.tc-white Seguros
+        div.col-xs
+          a(href="#").bold.tc-white Autos
+        div.col-xs
+          a(href="#").bold.tc-white Cruceros
+        div.col-xs
+          a(href="#").bold.tc-white OFERTAS
+        div.col-xs
+          a(href="#").bold.tc-white Más 
+            span.glyphicon.glyphicon-menu-down
+                
+    div
+      div.row.p.ml
+          a(href="#").fs-body-2.tc-black.mr Home 
+          span.fs-body-2.tc-black.mr / 
+          a(href="#").fs-body-2.tc-black.mr Hotel 
+          span.fs-body-2.tc-black.mr /Buenos Aires
+      div.row.border
+        .col-xs-12(id="header-content")
+          div.row
+            span.fs-headline Hoteles disponibles para:
+          div.row.hotel-parent.between-xs
+            div.row
+              span.mr.mdi.mdi-map-marker
+              span Buenos Aires
+            div.row
+              span.mr.mdi.mdi-calendar-today
+              span 07/13/2017
+            div.row
+              span.mr.mdi.mdi-calendar
+              span 07/28/2017
+            div.row
+              span.mr.mdi.mdi-account
+              span Huéspedes
+            div.row
+             lx-button(lx-type="flat").tc-indigo-300.cb Modificar busqueda
+      div.row.p.ml.mr.between-xs
+        div.col-xs-3.card.nodisplay.p(style="height: 70vh")
+          span.mt.bold Nombre del hotel
+            lx-search-filter
+              input(type="text" ng-model="vm.searchHotel" placeholder="Buscar")
+        div.col-lg-8.col-md-8.col-sm-11.col-xs-11.hotel-conteiner.transition
+          div.mt.mb.p.row.around-xs.center-xs(ng-repeat="hotel in vm.hoteles|filter:{name:vm.searchHotel}").card.hotel-parent
+           div.col-xs-3.conteiner-image
+            img.hotel-img(ng-src="/img/{{hotel.name}}.jpg")
+            span.w100.p.bgc-primary.tc-white.bold(style="position:absolute; top:0; left:0") {{hotel.name}}
+           div.row.ml.col-xs-3
+              span.col-xs-12.text-left.fs-title.bold {{hotel.name}}
+              div.col-xs-12.row
+               lx-icon.tc-yellow-600(lx-id="star" ng-repeat="star in vm.stars(hotel.stars) track by $index")
+              span.tc-orange-500.bold.fs-subhead Solo la habitacion
+              div.row.col-xs-12
+               lx-button(lx-color="black" lx-type="icon" lx-tooltip="{{feature.tool}}" lx-tooltip-position="bottom" ng-repeat="feature in hotel.features track by $index")
+                i(ng-class="['mdi', 'mdi-{{feature.id}}']")
+           div.hotel-column.col-xs-3.ml
+              span.fs-body-2 Precio por noche por habitación
+              span.fs-headline.tc-orange-500 ARS 
+               strong {{hotel.price}}
+              span.fs-body-1 Impuestos y tasas no incluidas
+              lx-button(lx-size="m") Ver hotel
+              span.display-block.bold.fs-body-1 Paga en cuotas          
+              span.bold.fs-body-1 Paga en destino
