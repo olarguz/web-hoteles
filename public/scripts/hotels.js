@@ -11,7 +11,7 @@
             vm.hoteles = res.data.hotels;
         });
         function obtenerEstrellas(length) {
-            return new Array(parseInt(length));
+            return new Array(length);
         }
     }
 })();

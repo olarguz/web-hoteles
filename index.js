@@ -1,5 +1,7 @@
 'use strict'
+
 const server = require('./app')
+
 let hoteles = [
     {
         name: "Hotel Emperador", 
