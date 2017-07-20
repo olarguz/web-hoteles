@@ -4,15 +4,12 @@ html
     title= title
     link(rel='stylesheet', href='/vendor/lumx.css')
     link(rel='stylesheet', href='/vendor/flexboxgrid.css')
+    link(rel='stylesheet', href='/vendor/rzslider.css')
     link(rel='stylesheet', href='/styles/main.css')
     link(rel='shortcut icon', href='/img/logo-almundo.svg', type='image/svg') 
   body
     block content
     
     block footer
-      script(src="/vendor/jquery.min.js")
-      script(src="/vendor/angular.min.js")
-      script(src="/vendor/velocity.min.js")
-      script(src="/vendor/moment-with-locales.min.js")
-      script(src="/vendor/lumx.min.js")
+      script(src="/dist/lib.js")
       script(src="/scripts/hotels.js")

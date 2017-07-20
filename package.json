@@ -3,17 +3,27 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "gulp"
   },
   "author": "Olmedo",
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "~1.15.1",
     "cors": "^2.8.3",
     "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^4.2.0",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-series": "^1.0.2",
+    "gulp-uglify": "^3.0.0",
     "helmet": "^3.6.1",
     "http-status": "^1.0.1",
-    "morgan": "^1.8.2",
     "jade": "~1.11.0",
+    "morgan": "^1.8.2",
     "nodemon": "^1.11.0",
     "serve-favicon": "~2.3.0"
   }
